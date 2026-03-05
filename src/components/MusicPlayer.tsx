@@ -1,23 +1,18 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 const MusicPlayer = () => {
   const [playing, setPlaying] = useState(false);
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-
-  const toggle = () => {
-    setPlaying((prev) => !prev);
-  };
 
   return (
     <>
       {playing && (
         <iframe
-          ref={iframeRef}
-          className="fixed w-0 h-0 opacity-0 pointer-events-none"
-          style={{ position: "fixed", top: "-9999px", left: "-9999px" }}
-          src="https://www.youtube.com/embed/gMbQMkf5IiU?autoplay=1&loop=1&playlist=gMbQMkf5IiU"
-          allow="autoplay; encrypted-media"
+          className="fixed bottom-20 right-4 z-50 rounded-lg shadow-2xl border border-border"
+          style={{ width: "300px", height: "80px" }}
+          src="https://open.spotify.com/embed/track/5EBwCPYdMOOpoMSTkBzNkl?utm_source=generator&theme=0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
           title="Salvatore - Lana Del Rey"
         />
       )}
@@ -27,9 +22,9 @@ const MusicPlayer = () => {
         transition={{ delay: 2 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        onClick={toggle}
+        onClick={() => setPlaying(!playing)}
         className="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-primary hover:bg-muted transition-colors animate-pulse-glow cursor-pointer"
-        aria-label={playing ? "Pause music" : "Play music"}
+        aria-label={playing ? "Hide music" : "Play music"}
       >
         <span className="text-lg">{playing ? "♫" : "♪"}</span>
       </motion.button>
