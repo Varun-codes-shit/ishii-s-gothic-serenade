@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import gothBg from "@/assets/goth-bg.jpg";
 import gothCake from "@/assets/goth-cake.jpg";
-import RosePetals from "@/components/RosePetals";
 import InterestCard from "@/components/InterestCard";
 
 const interests = [
