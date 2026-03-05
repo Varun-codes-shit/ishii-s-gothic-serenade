@@ -170,7 +170,7 @@ const GothSlider = ({ slides }: GothSliderProps) => {
       </div>
 
       {/* Thumbnails */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-4">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex gap-3">
         {slides.map((s, i) => (
           <motion.button
             key={i}
