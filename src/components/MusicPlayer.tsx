@@ -14,8 +14,9 @@ const MusicPlayer = () => {
       {playing && (
         <iframe
           ref={iframeRef}
-          className="hidden"
-          src="https://www.youtube.com/embed/gMbQMkf5IiU?autoplay=1&loop=1&playlist=gMbQMkf5IiU&mute=0"
+          className="fixed w-0 h-0 opacity-0 pointer-events-none"
+          style={{ position: "fixed", top: "-9999px", left: "-9999px" }}
+          src="https://www.youtube.com/embed/gMbQMkf5IiU?autoplay=1&loop=1&playlist=gMbQMkf5IiU"
           allow="autoplay; encrypted-media"
           title="Salvatore - Lana Del Rey"
         />
