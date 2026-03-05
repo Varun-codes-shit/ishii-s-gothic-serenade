@@ -14,9 +14,6 @@ const interests = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-hidden relative">
-      <MusicPlayer />
-      
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center goth-gradient">
         <div
