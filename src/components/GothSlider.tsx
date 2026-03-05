@@ -170,14 +170,14 @@ const GothSlider = ({ slides }: GothSliderProps) => {
       </div>
 
       {/* Thumbnails */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-4">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex gap-3">
         {slides.map((s, i) => (
           <motion.button
             key={i}
             onClick={() => goTo(i)}
             whileHover={{ scale: 1.05, y: -5 }}
             whileTap={{ scale: 0.95 }}
-            className={`relative w-28 h-40 sm:w-36 sm:h-52 rounded-md overflow-hidden border-2 transition-all duration-300 cursor-pointer ${
+            className={`relative w-20 h-28 sm:w-24 sm:h-36 rounded-md overflow-hidden border-2 transition-all duration-300 cursor-pointer ${
               i === current
                 ? "border-primary animate-pulse-glow"
                 : "border-border opacity-60 hover:opacity-90"
