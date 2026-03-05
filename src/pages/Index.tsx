@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import gothBg from "@/assets/goth-bg.jpg";
 import gothCake from "@/assets/goth-cake.jpg";
 import InterestCard from "@/components/InterestCard";
-import MusicPlayer from "@/components/MusicPlayer";
 
 const interests = [
   { emoji: "🖤", title: "Goth", description: "The dark aesthetic hits different — shadows, silence, and all things beautifully eerie." },
