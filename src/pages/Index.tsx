@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import gothBg from "@/assets/goth-bg.jpg";
 import gothCake from "@/assets/goth-cake.jpg";
 import InterestCard from "@/components/InterestCard";
+import MusicPlayer from "@/components/MusicPlayer";
 
 const interests = [
   { emoji: "🖤", title: "Goth", description: "The dark aesthetic hits different — shadows, silence, and all things beautifully eerie." },
@@ -14,6 +15,7 @@ const interests = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-hidden relative">
+      <MusicPlayer />
       
 
       {/* Hero Section */}
