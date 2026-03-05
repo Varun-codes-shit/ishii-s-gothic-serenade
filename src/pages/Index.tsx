@@ -5,9 +5,9 @@ import RosePetals from "@/components/RosePetals";
 import InterestCard from "@/components/InterestCard";
 
 const interests = [
-  { emoji: "🖤", title: "Goth", description: "Dark souls understand beauty differently — in shadows, in silence, in the spaces between." },
-  { emoji: "📺", title: "TV Girl", description: "Because the best playlists are the ones that make you feel everything at once." },
-  { emoji: "🌹", title: "Salvatore", description: "Soft skin, sad eyes... the kind of beauty Lana wrote about." },
+  { emoji: "🖤", title: "Goth", description: "The dark aesthetic hits different — shadows, silence, and all things beautifully eerie." },
+  { emoji: "📺", title: "TV Girl", description: "Elite music taste, no debate. The kind of songs you put on repeat at 2am." },
+  { emoji: "🌹", title: "Salvatore", description: "A vibe, a mood, a whole aesthetic in one song." },
   { emoji: "🔫", title: "Fame Is A Gun", description: "Sharp, unapologetic, and always hitting different." },
   { emoji: "🎮", title: "Roblox", description: "Building worlds, breaking rules — the digital playground of a creative mind." },
 ];
@@ -134,7 +134,7 @@ const Index = () => {
             </h2>
             <div className="bg-card border border-border rounded-lg p-8 sm:p-12 text-left space-y-5">
               <p className="font-gothic-body text-foreground text-lg leading-relaxed italic">
-                Dear Ishii-san,
+                Yo Ishii-san,
               </p>
               <p className="font-gothic-body text-foreground text-lg leading-relaxed">
                 Happy 14th birthday! 🖤 Another year of being unapologetically you — 
@@ -142,17 +142,15 @@ const Index = () => {
                 and knows that fame really is a gun.
               </p>
               <p className="font-gothic-body text-foreground text-lg leading-relaxed">
-                You're only two years younger than me, but honestly? 
-                You've already got a vibe that most people spend their whole lives trying to find. 
-                Your aesthetic is unmatched, your taste is elite, and your energy? Absolutely iconic.
+                You're two years younger than me but your music taste and aesthetic are already way too elite. 
+                Honestly respect the whole vibe you've got going on — not many people can pull it off like that.
               </p>
               <p className="font-gothic-body text-foreground text-lg leading-relaxed">
-                Here's to another year of building worlds in Roblox, 
-                discovering songs that hit different at 2am, and staying beautifully, 
-                wonderfully toxic. 🤭
+                Here's to another year of grinding on Roblox, 
+                discovering bangers that hit different at 2am, and staying wonderfully toxic. 🤭
               </p>
               <p className="font-gothic-body text-primary text-xl leading-relaxed mt-8 text-center text-glow-soft">
-                Never change. The world needs more people like you. ♱
+                Keep being cool. Happy bday homie ♱
               </p>
             </div>
           </motion.div>
