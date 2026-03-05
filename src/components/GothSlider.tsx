@@ -59,12 +59,12 @@ const GothSlider = ({ slides }: GothSliderProps) => {
     center: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
+      transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as const },
     },
     exit: (dir: "next" | "prev") => ({
       opacity: 0,
       scale: dir === "next" ? 0.9 : 1.1,
-      transition: { duration: 0.6, ease: "easeInOut" },
+      transition: { duration: 0.6, ease: "easeInOut" as const },
     }),
   };
 
@@ -74,7 +74,7 @@ const GothSlider = ({ slides }: GothSliderProps) => {
       opacity: 1,
       y: 0,
       filter: "blur(0px)",
-      transition: { duration: 0.6, delay: delay * 0.15 + 0.3, ease: "easeOut" },
+      transition: { duration: 0.6, delay: delay * 0.15 + 0.3, ease: "easeOut" as const },
     }),
     exit: { opacity: 0, y: -50, filter: "blur(10px)", transition: { duration: 0.3 } },
   };
