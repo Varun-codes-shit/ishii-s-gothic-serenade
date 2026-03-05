@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import gothBg from "@/assets/goth-bg.jpg";
 import gothCake from "@/assets/goth-cake.jpg";
-import RosePetals from "@/components/RosePetals";
 import InterestCard from "@/components/InterestCard";
 
 const interests = [
@@ -15,7 +14,7 @@ const interests = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-hidden relative">
-      <RosePetals />
+      
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center goth-gradient">
