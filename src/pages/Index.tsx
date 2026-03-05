@@ -1,7 +1,47 @@
 import { motion } from "framer-motion";
 import gothBg from "@/assets/goth-bg.jpg";
 import gothCake from "@/assets/goth-cake.jpg";
+import gothSlide1 from "@/assets/goth-slide1.jpg";
+import gothSlide2 from "@/assets/goth-slide2.jpg";
+import gothSlide3 from "@/assets/goth-slide3.jpg";
+import ishii from "@/assets/ishii.png";
+import GothSlider from "@/components/GothSlider";
 import InterestCard from "@/components/InterestCard";
+
+const slides = [
+  {
+    image: gothSlide1,
+    subtitle: "March 6th, 2026",
+    title: "Happy Birthday",
+    topic: "Ishii-san ♱",
+    description:
+      "Another year of being unapologetically you — the goth queen, the one who vibes to Salvatore on repeat and knows that fame really is a gun.",
+  },
+  {
+    image: gothSlide2,
+    subtitle: "The Dark Aesthetic",
+    title: "14",
+    topic: "Years of Being Elite",
+    description:
+      "Your music taste and aesthetic are already way too elite. Not many people can pull it off like that. Honestly respect the whole vibe.",
+  },
+  {
+    image: gothCake,
+    subtitle: "A Cake As Dark As Your Soul",
+    title: "Make a Wish",
+    topic: "Blow the candles ✦",
+    description:
+      "Every year deserves a cake that matches the aesthetic. Dark frosting, crimson roses — because basic was never your thing.",
+  },
+  {
+    image: gothSlide3,
+    subtitle: "stay toxic 🤭",
+    title: "Keep Vibing",
+    topic: "Forever & Always",
+    description:
+      "Here's to another year of grinding on Roblox, discovering bangers at 2am, and staying wonderfully toxic.",
+  },
+];
 
 const interests = [
   { emoji: "🖤", title: "Goth", description: "The dark aesthetic hits different — shadows, silence, and all things beautifully eerie." },
@@ -14,91 +54,11 @@ const interests = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-hidden relative">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center goth-gradient">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: `url(${gothBg})` }}
-        />
-        <div className="absolute inset-0 goth-vignette" />
-
-        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-          >
-            <p className="font-gothic-body text-muted-foreground text-lg tracking-[0.3em] uppercase mb-4">
-              March 6th, 2026
-            </p>
-            <h1 className="font-gothic-blackletter text-6xl sm:text-8xl md:text-9xl text-primary text-glow mb-6">
-              Happy Birthday
-            </h1>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 1.5 }}
-              className="font-gothic-display text-3xl sm:text-4xl text-foreground mb-2"
-            >
-              Ishii-san
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.8, duration: 1.5 }}
-              className="mt-6"
-            >
-              <span className="font-gothic-display text-7xl sm:text-8xl text-primary text-glow animate-flicker inline-block">
-                14
-              </span>
-            </motion.div>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2.5, duration: 1.5 }}
-              className="font-gothic-body text-muted-foreground italic text-xl mt-4 tracking-wide"
-            >
-              "stay toxic 🤭"
-            </motion.p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 3, duration: 1 }}
-            className="mt-12"
-          >
-            <div className="animate-float text-4xl">↓</div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Cake Section */}
-      <section className="relative py-24 px-6 goth-gradient">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-          >
-            <h2 className="font-gothic-display text-3xl sm:text-4xl text-primary text-glow-soft mb-12">
-              A Cake As Dark As Your Aesthetic ✦
-            </h2>
-            <div className="relative inline-block">
-              <img
-                src={gothCake}
-                alt="Gothic birthday cake with dark frosting and crimson roses"
-                className="rounded-lg max-w-sm mx-auto shadow-2xl border border-border"
-              />
-              <div className="absolute inset-0 rounded-lg animate-pulse-glow" />
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      {/* Full-screen Slider Hero */}
+      <GothSlider slides={slides} />
 
       {/* Interests Section */}
-      <section className="relative py-24 px-6">
+      <section className="relative py-24 px-6 goth-gradient">
         <div className="max-w-5xl mx-auto">
           <motion.h2
             initial={{ opacity: 0 }}
@@ -118,7 +78,7 @@ const Index = () => {
       </section>
 
       {/* Message Section */}
-      <section className="relative py-24 px-6 goth-gradient">
+      <section className="relative py-24 px-6">
         <div className="max-w-2xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
