@@ -124,9 +124,6 @@
   animation: pulse-glow 3s ease-in-out infinite;
 }
 
-.animate-paw-fall {
-  animation: paw-fall linear infinite;
-}
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
