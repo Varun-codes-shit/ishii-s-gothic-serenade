@@ -45,7 +45,6 @@ const GothSlider = ({ slides }: GothSliderProps) => {
     [isAnimating, current]
   );
 
-  // Auto-advance
   useEffect(() => {
     const timer = setInterval(goNext, 7000);
     return () => clearInterval(timer);
@@ -112,7 +111,7 @@ const GothSlider = ({ slides }: GothSliderProps) => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/30" />
-          <div className="absolute inset-0 goth-vignette" />
+          <div className="absolute inset-0 lion-vignette" />
         </motion.div>
       </AnimatePresence>
 
